@@ -15,11 +15,11 @@ public class ImpostoRenda {
 	public void informarValor(Double v){
 		
 		valor = v;
-		if(valor < 1710.78) taxa = new PrimeiraFaixa();
-		else if (valor < 2563.91) taxa = new SegundaFaixa();
-		else if (valor < 3418.59) taxa = new TerceiraFaixa();
-		else if (valor < 4271.59) taxa = new QuartaFaixa();
-		else taxa = new QuintaFaixa();
+		if(valor < 1710.78) taxa = new PrimeiraFaixa(0.0);
+		else if (valor < 2563.91) taxa = new SegundaFaixa(7.5);
+		else if (valor < 3418.59) taxa = new TerceiraFaixa(15.0);
+		else if (valor < 4271.59) taxa = new QuartaFaixa(22.5);
+		else taxa = new QuintaFaixa(27.5);
 	}
 	
 	public Double calcularImposto(){
