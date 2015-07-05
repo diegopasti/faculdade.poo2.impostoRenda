@@ -8,7 +8,6 @@ public class FaixaAbstrata implements Aliquota{
 		taxa = valor;
 	}
 	
-	@Override
 	public Double calcularValor(Double v) {
 		return v*(taxa/100);
 	}
